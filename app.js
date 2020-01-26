@@ -27,6 +27,10 @@ app.use('/products', productRoutes);
 app.use('/orders', ordersRoutes);
 app.use('/user', userRoutes);
 
+app.get('/', (req, res) => {
+  res.send('hello world');
+})
+
 app.use((req, res, next) => {
     const error = new Error('not found');
     error.status = 404;
