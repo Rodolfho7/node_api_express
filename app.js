@@ -5,8 +5,14 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
-mongoose.connect('mongodb+srv://rod:' + process.env.MONGO_ATLAS_USER_PW + '@nodeapi-zmxno.mongodb.net/test?retryWrites=true&w=majority',
-                    {useNewUrlParser: true});
+
+try {
+  mongoose.connect('mongodb+srv://' + process.env.MONGO_ATLAS_USER + ':' + process.env.MONGO_ATLAS_PW + '@nodeapi-zmxno.mongodb.net/test?retryWrites=true&w=majority',
+  {useNewUrlParser: true});
+}
+catch(error) {
+  console.log('falha:\n' + error);
+}
 
 
 const productRoutes = require('./api/routes/products');
