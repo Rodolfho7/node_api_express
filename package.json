@@ -2,9 +2,9 @@
   "name": "node-rest",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index"
+    "start": "node app"
   },
   "author": "rodolfho azevedo",
   "license": "ISC",
