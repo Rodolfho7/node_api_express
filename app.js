@@ -30,7 +30,7 @@ app.use('/orders', ordersRoutes);
 app.use('/user', userRoutes);
 
 app.get('/', (req, res) => {
-  res.send('hello world');
+  res.sendFile(__dirname + '/fortes.html');
 })
 
 app.use((req, res, next) => {
